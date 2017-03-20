@@ -1,10 +1,15 @@
 total = 0
 count = 0
 average = 0
-loop do
-    puts "please enter a number. To exit just press enter."
-    user_input = gets.chomp
-    # input=[]
+response = ""
+
+puts "do you want to work with numbers or strings?"
+answer = gets.chomp
+
+if answer == "numbers"
+  loop do
+      puts "please enter a number. To exit just press enter."
+      user_input = gets.chomp
     if user_input == ""
       puts "thank you! here is the total of your numbers #{total} and here is your new  average #{average}"
       break
@@ -15,6 +20,21 @@ loop do
       puts "here is your new total #{total} and your average is #{average}"
     end
   end
+end
+
+if answer == "strings"
+  loop do
+    puts "please enter a string"
+    string = gets.chomp
+    if string == ""
+      puts "Thank you. Here is your new terrible sentence! #{response}"
+      break
+    else
+      response += string
+    end
+  end
+end
+
 
 
 #My issues were:
